@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
+import Loading from './image/loading.gif';
 
 import Countries from './Components/Countries';
 import Search from "./Components/Search";
@@ -51,12 +52,10 @@ function App() {
     setFilteredCountries(newCountries);
   }
 
-  const loadingMessage = "Countries are loading!";
-
   return <>
     <h1>Country App</h1>
     <Search onSearch={handleSearch} />
-    {isLoading && <h3>{ loadingMessage }</h3>}
+    {isLoading && <img src={Loading} alt="Loading" />}
     {error && <h3 style={{ color: "red" }}>{error.message}</h3>}
     {countries && <Countries countries={filteredCountries} onRemoveCountry={handleRemoveCountry} />}
     </>
