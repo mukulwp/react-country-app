@@ -1,0 +1,24 @@
+.country{
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+}
+.country:hover{
+    transform: scale(1.05);
+}
+.country div{
+    min-height: 300px;
+}
+.country img{
+   width: 100%;
+}
+.country button{
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
